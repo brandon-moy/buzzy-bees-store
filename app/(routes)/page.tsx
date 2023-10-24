@@ -7,7 +7,7 @@ import getBillboard from "@/actions/get-billboards";
 
 const Home = async () => {
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard("777dfc22-4aa3-4e45-92d5-52358f6be80a");
+  const billboard = await getBillboard("1f72b390-3108-44d3-aa5e-e38dff96dc52");
 
   return (
     <Container>
