@@ -10,8 +10,8 @@ import { ToasterProvider } from "@/providers/toast-provider";
 const font = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "eCommerce Store",
-  description: "Store page",
+  title: "BuzzyBees",
+  description: "An eCommerce shop for all your bee and beekeeping needs.",
 };
 
 export default function RootLayout({
