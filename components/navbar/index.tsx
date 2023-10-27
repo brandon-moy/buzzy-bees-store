@@ -11,11 +11,13 @@ const Navbar = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="border-b bg-white bg-opacity-75 fixed top-0 w-full z-50">
+    <div className="border-b border-primary bg-white bg-opacity-75 fixed top-0 w-full z-50">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex h-16 items-center">
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
-            <p className="font-bold font-satisfy text-xl">BuzzyBees</p>
+            <p className="font-bold font-satisfy text-2xl text-black">
+              BuzzyBees
+            </p>
           </Link>
           <MainNav data={categories} />
           <NavbarActions />
