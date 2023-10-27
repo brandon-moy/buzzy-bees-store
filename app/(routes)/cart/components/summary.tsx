@@ -25,11 +25,9 @@ const Summary = () => {
     }
   }, [searchParams, removeAll]);
 
-  const subtotalPrice = items.reduce((total, item) => {
+  const price = items.reduce((total, item) => {
     return total + Number(item.price);
   }, 0);
-  const taxAmount = subtotalPrice * 0.0725;
-  const totalPrice = subtotalPrice + taxAmount;
 
   const onCheckout = async () => {
     const response = await axios.post(
@@ -43,26 +41,18 @@ const Summary = () => {
   };
 
   return (
-    <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
-      <h2 className="text-lg font-medium text-gray-900">Order Summary</h2>
+    <div className="mt-16 rounded-lg bg-background px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+      <h2 className="text-lg font-medium text-text">Order Summary</h2>
       <div className="mt-6 space-y-4">
-        <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-          <div className="text-base font-xs text-gray-600">Subtotal</div>
-          <Currency value={subtotalPrice} />
-        </div>
-        <div className="flex items-center justify-between">
-          <div className="text-base font-xs text-gray-600">Tax (@7.25%)</div>
-          <Currency value={taxAmount} />
-        </div>
-        <div className="flex items-center justify-between pt-4">
-          <div className="text-base font-medium text-gray-900">Total</div>
-          <Currency value={totalPrice} />
+        <div className="flex items-center justify-between border-t border-accent pt-4">
+          <div className="text-base font-xs text-gray-800">Cart total</div>
+          <Currency value={price} />
         </div>
       </div>
       <Button
         disabled={items.length === 0}
         onClick={onCheckout}
-        className="w-full mt-6"
+        className="w-full mt-6 bg-primary text-text"
       >
         Checkout
       </Button>
