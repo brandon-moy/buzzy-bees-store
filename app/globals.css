@@ -20,6 +20,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background-color: #e2973b;
-  outline: 1px solid #fcdab0;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }

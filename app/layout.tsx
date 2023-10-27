@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${font.className} bg-secondary`}>
+      <body className={`${font.className}`}>
         <ModalProvider />
         <ToasterProvider />
         <Navbar />
