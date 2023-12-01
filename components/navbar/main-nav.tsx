@@ -54,6 +54,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           <ul className="absolute flex flex-col z-50 gap-y-4 w-[135px] h-[160px] sm:h-auto p-4 mt-4 font-medium bg-white border border-gray-300 rounded-lg sm:relative md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 sm:bg-transparent">
             {routes.map((route) => (
               <Link
+                onClick={() => setShow(false)}
                 key={route.href}
                 href={route.href}
                 className={cn(
