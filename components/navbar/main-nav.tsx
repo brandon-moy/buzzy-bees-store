@@ -28,7 +28,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           onClick={() => setShow(!show)}
           type="button"
           data-collapse-toggle="navbar-default"
-          className="bg-white inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="bg-white inline-flex items-center border border-gray-300 justify-center w-10 h-10 p-2 text-sm text-black rounded-lg md:hidden hover:bg-white focus:outline-none focus:bg-gray-100 focus:ring-2 focus:ring-gray-200"
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -51,7 +51,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           className={`${show ? "" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="absolute flex flex-col z-50 gap-y-4 w-[175px] h-[310px] sm:h-auto p-4 mt-4 font-medium bg-white border rounded-lg sm:relative md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 dark:bg-gray-900 dark:border-gray-700 sm:bg-transparent sm:dark:bg-transparent">
+          <ul className="absolute flex flex-col z-50 gap-y-4 w-[135px] h-[160px] sm:h-auto p-4 mt-4 font-medium bg-white border border-gray-300 rounded-lg sm:relative md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 sm:bg-transparent">
             {routes.map((route) => (
               <Link
                 key={route.href}
