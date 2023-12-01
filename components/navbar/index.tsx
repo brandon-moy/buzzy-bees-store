@@ -19,7 +19,9 @@ const Navbar = async () => {
               BuzzyBees
             </p>
           </Link>
-          <MainNav data={categories} />
+          <div className="w-full flex justify-end sm:justify-start">
+            <MainNav data={categories} />
+          </div>
           <NavbarActions />
         </div>
       </Container>
