@@ -22,7 +22,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
   }));
 
   return (
-    <nav className="flex items-center justify-end space-x-4 lg:space-x-6">
+    <nav className="flex items-center space-x-4 lg:space-x-6">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
         <button
           onClick={() => setShow(!show)}
